@@ -1,7 +1,12 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navigation from "@/component/auth/Navigation"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { getAuthSession } from "@/lib/nextauth"
+import AuthProvider from "@/components/providers/AuthProvider"
+import TrpcProvider from "@/components/providers/TrpcProvider"
+import ToastProvider from "@/components/providers/ToastProvider"
+import Navigation from "@/components/auth/Navigation"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
